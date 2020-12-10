@@ -1,4 +1,4 @@
-from database import add_entry, get_entries
+from database import add_entry, get_entries, create_table
 
 
 menu = """Please select one of the following options:
@@ -20,12 +20,7 @@ def view_entries(entries):
         print(f"{entry['date']}\n{entry['content']}\n\n")
 
 
-# entries = [
-#     {'content': 'Today I started learning programing', 'date': '01-01-2020'},
-#     {'content': 'I created my first SQLite database!', 'date': '02-01-2020'},
-#     {'content': 'I finished writing my programming diary application', 'date': '03-01-2020'},
-#     {'content': 'Today Im going to continue learning programming', 'date': '04-01-2020'},
-# ]
+create_table()
 
 while (user_input := input(menu)) != "3":
     if user_input == "1":
